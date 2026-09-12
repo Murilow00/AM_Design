@@ -1,0 +1,419 @@
+@import "tailwindcss";
+
+:root {
+    --am-yellow: #f7d94d;
+    --am-yellow-deep: #ffbf00;
+    --am-yellow-strong: #ffbf00;
+    --am-black: #111111;
+    --am-white: #f9f7f1;
+    --am-surface: rgba(255, 255, 255, 0.18);
+    --am-border: rgba(17, 17, 17, 0.12);
+    --am-text: #111111;
+    --am-text-soft: rgba(17, 17, 17, 0.76);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--am-yellow);
+    color: var(--am-text);
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-color: #111111 #f4d33c;
+    scrollbar-width: thin;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #111111 #f4d33c;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f4d33c;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #111111;
+    border-radius: 999px;
+    border: 2px solid #f4d33c;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #2a2a2a;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.siteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(14px);
+    background: rgba(255, 191, 0, 0.92);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+    box-shadow: 0 10px 30px rgba(17, 17, 17, 0.08);
+}
+
+.siteHeaderInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 88px;
+    padding: 0.5rem 0;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--am-black);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease;
+}
+
+.brand:hover {
+    transform: translateY(-1px);
+}
+
+.brandLogo {
+    width: clamp(180px, 18vw, 300px);
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    filter: drop-shadow(0 12px 18px rgba(17, 17, 17, 0.12));
+}
+
+.brandText {
+    font-size: 1rem;
+}
+
+.siteNav {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.siteNav a {
+    color: var(--am-text);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.siteNav a:hover {
+    background: rgba(17, 17, 17, 0.06);
+    transform: translateY(-1px);
+}
+
+.notFoundWrapper {
+    min-height: calc(100vh - 88px);
+    display: grid;
+    place-items: center;
+    padding: 4rem 1rem;
+}
+
+.notFoundCard {
+    width: min(720px, 100%);
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 32px;
+    box-shadow: 0 22px 50px rgba(17, 17, 17, 0.08);
+    padding: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+}
+
+.notFoundCode {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffbf00;
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+}
+
+.notFoundCard h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: -0.05em;
+}
+
+.notFoundCard p {
+    margin: 0 auto 1.75rem;
+    max-width: 560px;
+    color: rgba(17, 17, 17, 0.76);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.92rem 1.7rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.primaryButton {
+    background: #111111;
+    color: #ffbf00;
+    box-shadow: 0 16px 28px rgba(17, 17, 17, 0.18);
+}
+
+.secondaryButton {
+    border: 1px solid rgba(17, 17, 17, 0.25);
+    background: rgba(255, 255, 255, 0.18);
+    color: #111111;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 32px rgba(17, 17, 17, 0.12);
+}
+
+.pageShell {
+    background: var(--am-yellow);
+    min-height: 100vh;
+}
+
+.pageBanner {
+    padding: 4rem 0 2.5rem;
+}
+
+.pageBannerInner {
+    text-align: center;
+}
+
+.pageBanner h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    line-height: 1.04;
+    letter-spacing: -0.05em;
+}
+
+.pageBanner p {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    color: rgba(17, 17, 17, 0.75);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.contentSection {
+    padding: 1rem 0 5rem;
+}
+
+.altBackground {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.splitGrid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.leadParagraph {
+    margin: 0;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.infoCard,
+.featureCard,
+.servicePanel,
+.contactCard,
+.contactForm {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--am-border);
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(17, 17, 17, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.infoCard:hover,
+.featureCard:hover,
+.servicePanel:hover,
+.contactCard:hover,
+.contactForm:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(17, 17, 17, 0.1);
+}
+
+.infoCard,
+.contactCard,
+.featureCard,
+.servicePanel {
+    padding: 2rem;
+}
+
+.infoCard p,
+.featureCard p,
+.servicePanel p,
+.contactCard p,
+.contactCard li {
+    color: rgba(17, 17, 17, 0.8);
+    line-height: 1.8;
+}
+
+.threeColumnGrid,
+.servicesGridPage {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.cardNumber,
+.badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #111111;
+    color: var(--am-yellow);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.featureCard h3,
+.servicePanel h3,
+.contactCard h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1.5rem;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.contactCard ul {
+    padding-left: 1.25rem;
+    margin: 1rem 0 0;
+}
+
+.contactActions {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 40px rgba(17, 17, 17, 0.06);
+}
+
+.contactActionList {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.contactActionItem {
+    display: grid;
+    gap: 0.2rem;
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+    background: rgba(17, 17, 17, 0.04);
+    border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.contactActionItem strong {
+    font-size: 1rem;
+}
+
+.contactActionItem span {
+    color: rgba(17, 17, 17, 0.75);
+}
+
+@media (max-width: 900px) {
+    .splitGrid,
+    .threeColumnGrid,
+    .servicesGridPage,
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .siteHeaderInner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.8rem 0;
+    }
+
+    .siteNav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+    .brandText {
+        display: none;
+    }
+
+    .pageBanner {
+        padding-top: 3rem;
+    }
+
+    .pageBannerInner p,
+    .leadParagraph,
+    .infoCard,
+    .featureCard,
+    .servicePanel,
+    .contactCard,
+    .contactForm {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
