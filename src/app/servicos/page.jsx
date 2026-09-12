@@ -1,22 +1,22 @@
-import PageBanner from '../../components/PageBanner';
-import SiteHeader from '../../components/SiteHeader';
+import PageBanner from "../../components/PageBanner";
+import SiteHeader from "../../components/SiteHeader";
 
 const services = [
   {
-    title: 'Sites institucionais',
-    text: 'Estruturas modernas e profissionais para empresas que precisam transmitir confiabilidade e valor.',
+    title: "Sites institucionais",
+    text: "Estruturas modernas e profissionais para empresas que precisam transmitir confiabilidade e valor.",
   },
   {
-    title: 'Landing pages',
-    text: 'Páginas pensadas para conversão, com mensagens claras, foco em ação e estrutura de vendas.',
+    title: "Landing pages",
+    text: "Páginas pensadas para conversão, com mensagens claras, foco em ação e estrutura de vendas.",
   },
   {
-    title: 'Marketing digital',
-    text: 'Estratégias de presença, tráfego e posicionamento para atrair e converter mais clientes.',
+    title: "Marketing digital",
+    text: "Estratégias de presença, tráfego e posicionamento para atrair e converter mais clientes.",
   },
   {
-    title: 'Manutenção e otimização',
-    text: 'Acompanhamento contínuo para maior performance, segurança, experiência e evolução do projeto.',
+    title: "Manutenção e otimização",
+    text: "Acompanhamento contínuo para maior performance, segurança, experiência e evolução do projeto.",
   },
 ];
 
