@@ -29,7 +29,7 @@ export default function ContatoPage() {
                 </li>
                 <li>
                   WhatsApp:{" "}
-                  <a href="https://wa.me/5519989949093">(19) 98944-9093</a>
+                  <a href="https://wa.me/5519989449093">(19) 98944-9093</a>
                 </li>
                 <li>Campinas - SP</li>
               </ul>
@@ -37,7 +37,7 @@ export default function ContatoPage() {
 
             <div className="contactActions">
               <a
-                href="https://wa.me/5519989949093"
+                href="https://wa.me/5519989449093"
                 className="primaryButton"
                 target="_blank"
                 rel="noreferrer"
