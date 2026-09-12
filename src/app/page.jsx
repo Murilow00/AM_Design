@@ -1,27 +1,27 @@
-import Image from "next/image";
-import MetricCard from "../components/MetricCard";
+import { Zap, TrendingUp, Wrench } from "lucide-react";
+import SiteHeader from "../components/SiteHeader";
 import SectionHeading from "../components/SectionHeading";
 import ServiceCard from "../components/ServiceCard";
-import SiteHeader from "../components/SiteHeader";
+import MetricCard from "../components/MetricCard";
 import styles from "./page.module.css";
 
 const services = [
   {
-    icon: "⚡",
+    icon: Zap,
     title: "Sites estratégicos",
     description:
       "Landing pages e sites institucionais focados em conversão, credibilidade e geração de leads.",
     list: ["Posicionamento de marca", "Estrutura de vendas", "Design premium"],
   },
   {
-    icon: "📈",
+    icon: TrendingUp,
     title: "Presença digital",
     description:
       "Transformamos sua empresa em uma marca reconhecida com identidade visual e presença online sólida.",
     list: ["Branding digital", "Conteúdo comercial", "Foco em resultado"],
   },
   {
-    icon: "🛠️",
+    icon: Wrench,
     title: "Manutenção e crescimento",
     description:
       "Acompanhamos seu site com melhorias contínuas para garantir performance, segurança e evolução.",
@@ -32,8 +32,8 @@ const services = [
 const metrics = [
   {
     value: "Velocidade",
-    label: "Projetos Velozes",
-    detail: "mercado e suporte",
+    label: "Agilidade na entrega",
+    detail: "Do planejamento ao lançamento, com acompanhamento.",
   },
   {
     value: "4.9/5",
@@ -42,8 +42,8 @@ const metrics = [
   },
   {
     value: "Tecnologia",
-    label: "Atualidades do mercado",
-    detail: "todas as nossas tecnologias são as mais modernas",
+    label: "Tecnologia para o seu negócio",
+    detail: "Ferramentas alinhadas às necessidades de cada projeto.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <SiteHeader />
-      <main className={styles.page}>
+      <main id="conteudo" tabIndex={-1} className={styles.page}>
         <section id="inicio" className={styles.hero}>
           <div className={`${styles.container} ${styles.heroGrid}`}>
             <div className={styles.heroContent}>
@@ -86,16 +86,12 @@ export default function Home() {
 
             <div
               className={styles.visualPanel}
-              role="img"
               aria-label="Logo da AM Digital Studio"
             >
-              <Image
+              <img
                 src="/images/logo.png"
                 alt="AM Digital Studio"
-                width={760}
-                height={760}
                 className={styles.logoImage}
-                priority
               />
             </div>
           </div>
@@ -216,7 +212,7 @@ export default function Home() {
               </h2>
             </div>
             <a
-              href="mailto:contato@amdigitalstudio.com.br"
+              href="mailto:amdigitalstudio67@gmail.com"
               className={styles.primaryButton}
             >
               amdigitalstudio67@gmail.com

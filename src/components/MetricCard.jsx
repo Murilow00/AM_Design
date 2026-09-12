@@ -5,7 +5,7 @@ export default function MetricCard({ value, label, detail }) {
     <article className={styles.metricCard}>
       <strong>{value}</strong>
       <span>{label}</span>
-      <small>{detail}</small>
+      <p>{detail}</p>
     </article>
   );
 }

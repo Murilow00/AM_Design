@@ -5,7 +5,7 @@ export default function ContatoPage() {
   return (
     <>
       <SiteHeader />
-      <main className="pageShell">
+      <main id="conteudo" tabIndex={-1} className="pageShell">
         <PageBanner
           eyebrow="Contato"
           title="Fale com a AM Digital Studio."
@@ -15,14 +15,22 @@ export default function ContatoPage() {
         <section className="contentSection">
           <div className="container contactGrid">
             <div className="contactCard">
-              <h3>Entre em contato</h3>
+              <h2>Entre em contato</h2>
               <p>
                 Se você quer um site que comunica valor, gera confiança e vende
                 melhor, este é o lugar certo.
               </p>
               <ul>
-                <li>Email: amdigitalstudio67@gmail.com</li>
-                <li>WhatsApp: (19) 98944-9093</li>
+                <li>
+                  E-mail:{" "}
+                  <a href="mailto:amdigitalstudio67@gmail.com">
+                    amdigitalstudio67@gmail.com
+                  </a>
+                </li>
+                <li>
+                  WhatsApp:{" "}
+                  <a href="https://wa.me/5519989949093">(19) 98944-9093</a>
+                </li>
                 <li>Campinas - SP</li>
               </ul>
             </div>

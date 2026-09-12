@@ -20,7 +20,7 @@ export default function SobrePage() {
   return (
     <>
       <SiteHeader />
-      <main className="pageShell">
+      <main id="conteudo" tabIndex={-1} className="pageShell">
         <PageBanner
           eyebrow="Sobre nós"
           title="Uma agência que entende o que faz uma marca crescer."
@@ -52,7 +52,7 @@ export default function SobrePage() {
               {values.map((item) => (
                 <article key={item.title} className="featureCard">
                   <span className="cardNumber">{item.title.slice(0, 1)}</span>
-                  <h3>{item.title}</h3>
+                  <h2>{item.title}</h2>
                   <p>{item.text}</p>
                 </article>
               ))}

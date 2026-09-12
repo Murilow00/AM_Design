@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <>
       <SiteHeader />
-      <main className="pageShell">
+      <main id="conteudo" tabIndex={-1} className="pageShell">
         <section className="notFoundWrapper">
           <div className="notFoundCard">
             <div className="notFoundCode">404</div>

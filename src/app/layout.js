@@ -1,3 +1,4 @@
+import "@fontsource-variable/geist";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Toaster } from "react-hot-toast";
