@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AM Digital Studio
 
-## Getting Started
+Site institucional da agência AM Digital Studio, desenvolvido com Next.js e React para apresentar serviços, valores, processos e canais de contato da marca.
 
-First, run the development server:
+## Visão geral
+
+Este projeto foi transformado de um template inicial em uma landing page premium para uma agência que vende sites e presença digital. A proposta visual usa uma identidade forte com tons de amarelo, contraste com preto e elementos com bordas arredondadas, sombras suaves e micro-interações.
+
+## Tecnologias
+
+- Next.js 16
+- React 19
+- App Router
+- JavaScript
+- CSS Modules + CSS global
+- Ant Design
+- react-hot-toast
+- Tailwind CSS
+- Biome para lint/format
+
+## Páginas principais
+
+- Home: apresentação da agência, serviços, diferenciais e chamadas para ação
+- Sobre: história, valores e proposta de valor
+- Serviços: oferta de soluções e entregáveis
+- Contato: canais de contato direto com a empresa
+- Página 404 personalizada
+
+## Estrutura do projeto
+
+```bash
+am/
+├── public/
+│   ├── images/
+│   ├── fonts/
+│   ├── icons/
+│   ├── media/
+│   └── sounds/
+├── src/
+│   ├── app/
+│   │   ├── contato/
+│   │   ├── servicos/
+│   │   ├── sobre/
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   ├── not-found.jsx
+│   │   ├── page.jsx
+│   │   └── page.module.css
+│   └── components/
+│       ├── PageBanner.jsx
+│       ├── SectionHeading.jsx
+│       ├── ServiceCard.jsx
+│       ├── MetricCard.jsx
+│       └── SiteHeader.jsx
+├── package.json
+├── next.config.mjs
+├── jsconfig.json
+├── biome.json
+├── postcss.config.mjs
+└── README.md
+```
+
+## Requisitos
+
+- Node.js 18.17 ou superior
+- npm
+
+## Como executar
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Acesse no navegador:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts disponíveis
 
-## Learn More
+```bash
+npm run dev
+```
+Executa a aplicação em modo de desenvolvimento.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
+Executa a validação do código com Biome.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run format
+```
+Formata os arquivos do projeto com Biome.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Observações
 
-## Deploy on Vercel
+- A marca da empresa é usada em elementos visuais e na aba do navegador.
+- O projeto foi pensado para um visual premium e institucional.
+- A navegação foi organizada em páginas separadas usando o App Router do Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O projeto pode ser implantado em plataformas como Vercel, Netlify ou qualquer ambiente capaz de hospedar aplicações Next.js.
+
+## Autor
+
+AM Digital Studio
