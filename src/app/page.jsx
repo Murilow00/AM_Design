@@ -1,8 +1,9 @@
-import { Zap, TrendingUp, Wrench } from "lucide-react";
-import SiteHeader from "../components/SiteHeader";
+import { TrendingUp, Wrench, Zap } from "lucide-react";
+import Image from "next/image";
+import MetricCard from "../components/MetricCard";
 import SectionHeading from "../components/SectionHeading";
 import ServiceCard from "../components/ServiceCard";
-import MetricCard from "../components/MetricCard";
+import SiteHeader from "../components/SiteHeader";
 import styles from "./page.module.css";
 
 const services = [
@@ -86,12 +87,16 @@ export default function Home() {
 
             <div
               className={styles.visualPanel}
+              role="img"
               aria-label="Logo da AM Digital Studio"
             >
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="AM Digital Studio"
+                width={760}
+                height={760}
                 className={styles.logoImage}
+                priority
               />
             </div>
           </div>

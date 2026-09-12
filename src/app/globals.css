@@ -29,6 +29,36 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html {
+  scrollbar-color: #171814 #f7d94d;
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #171814 #f7d94d;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f7d94d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #171814 0%, #3a3d34 100%);
+  border-radius: 999px;
+  border: 2px solid #f7d94d;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #2d2f29;
 }
 button,
 input,
@@ -413,10 +443,11 @@ main:focus {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
-    animation: none !important;
-    transition: none !important;
+    animation: none;
+    transition: none;
   }
 }

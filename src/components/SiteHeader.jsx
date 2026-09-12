@@ -1,9 +1,9 @@
 "use client";
 
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 
 const navItems = [
   { href: "/", label: "Início" },
@@ -15,15 +15,9 @@ const navItems = [
 export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const toggle = useRef(null);
-  function closeOnEscape(event) {
-    if (event.key === "Escape" && open) {
-      setOpen(false);
-      toggle.current?.focus();
-    }
-  }
+
   return (
-    <header className="siteHeader" onKeyDown={closeOnEscape}>
+    <header className="siteHeader">
       <a className="skipLink" href="#conteudo">
         Pular para o conteúdo
       </a>
@@ -40,7 +34,6 @@ export default function SiteHeader() {
           </span>
         </Link>
         <button
-          ref={toggle}
           className="menuToggle"
           type="button"
           aria-expanded={open}
